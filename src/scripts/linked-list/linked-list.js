@@ -29,7 +29,7 @@ class LinkedList {
   append(value) {
     let newNode = new Node(value);
 
-    if (this.currentTail === null) {
+    if (this.currentHead === null || this.currentTail === null) {
       this.currentTail = newNode;
       this.currentHead = this.currentTail;
     } else {
@@ -54,6 +54,19 @@ class LinkedList {
     result.push("null");
 
     return result.join(" ");
+  }
+
+  // Return a string representation of the current contents of the linked list
+  toArray() {
+    let current = this.currentHead;
+    const result = [];
+
+    while (current) {
+      result.push(current.value);
+      current = current.next;
+    }
+
+    return result;
   }
 
   // Attempt to read the node at the given index. If the index is not found, return undefined
@@ -96,6 +109,10 @@ class LinkedList {
     // Detatch old head from list path and make it null
     toRemove.next = null;
     toRemove = null;
+
+    if (this.currentHead === null) {
+      this.currentTail = null;
+    }
 
     // A node was removed, adjust size
     this.currentSize -= 1;

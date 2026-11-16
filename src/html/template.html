@@ -1,18 +1,74 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Page Title Here</title>
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <title>LinkedList Testing</title>
+  </head>
 
-    <body>
-        
-        <div id="page-container">
-            <header></header>
-            <main></main>
-            <footer></footer>
+  <body>
+    <div id="page-container">
+      <header>
+        <h1 id="header-hero">A Simple LinkedList System</h1>
+      </header>
+      <main>
+        <p id="project-details" class="card">
+          This page is an example use-case for a linked list system. It consists
+          of a linked list of Number objects. Each of these objects are
+          displayed on a card below. The commands below the card display are
+          linked to each of the functions of my LinkedList class. My hope is
+          this interactive demo will give some insight into how linked lists
+          work, and how they might be used in a real website.
+        </p>
+        <div id="display" class="card">
+          <div id="ll-items"></div>
         </div>
+        <div id="controls" class="card">
+          <form id="reset-form" class="card">
+            <h2 id="reset-form-hero" class="form-hero">Reset The List</h2>
+            <button type="submit" class="form-submit">Reset</button>
+          </form>
 
-    </body>
+          <form id="append-form" class="card">
+            <h2 id="append-form-hero" class="form-hero">Append A Number</h2>
+            <label for="append-input">Number</label>
+            <input
+              type="number"
+              name="append-input"
+              id="append-input"
+              value="0"
+            />
+            <button type="submit" class="form-submit">Append</button>
+          </form>
 
+          <form id="prepend-form" class="card">
+            <h2 id="prepend-form-hero" class="form-hero">Prepend A Number</h2>
+            <label for="prepend-input">Number</label>
+            <input
+              type="number"
+              name="prepend-input"
+              id="prepend-input"
+              value="0"
+            />
+            <button type="submit" class="form-submit">Prepend</button>
+          </form>
+
+          <form id="find-form" class="card">
+            <h2 id="find-form-hero" class="form-hero">Find A Number</h2>
+            <label for="append-input">Number</label>
+            <input type="number" name="find-input" id="find-input" value="0" />
+            <button type="submit" class="form-submit">Find</button>
+          </form>
+
+          <form id="pop-form" class="card">
+            <h2 id="pop-form-hero" class="form-hero">Pop A Number</h2>
+            <button type="submit" class="form-submit">Pop</button>
+          </form>
+        </div>
+        <div id="message" class="card">
+          <p id="message-text">Use a command above</p>
+        </div>
+      </main>
+      <footer></footer>
+    </div>
+  </body>
 </html>

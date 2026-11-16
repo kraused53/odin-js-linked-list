@@ -1,0 +1,8 @@
+#project-details {
+  font-size: 1.5rem;
+  text-indent: 5rem;
+}
+
+#project-details::first-letter {
+  font-size: 3rem;
+}

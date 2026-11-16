@@ -1,12 +1,15 @@
 const cssContext = require.context("../css", true, /\.css$/);
 cssContext.keys().forEach(cssContext);
 
-const ll = require("./linked-list/linked-list");
-const myLL = new ll();
+const { setupControls } = require("./controls/controls");
+const { updateDisplay } = require("./linked-list-display/linked-list-display");
+const {
+  initializeLinkedList,
+  getLinkedListString,
+} = require("./linked-list-system/manage-linked-list");
 
-console.log(`Empty LinkedList:\n\t${myLL.toString()}`);
+setupControls();
 
-for (let i = 0; i < 10; i++) {
-  myLL.prepend(i);
-  console.log(`Current LinkedList:\n\t${myLL.toString()}`);
-}
+initializeLinkedList();
+
+updateDisplay();

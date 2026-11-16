@@ -1,0 +1,22 @@
+.card {
+  background-color: var(--card-background);
+  border-radius: 2rem;
+  padding: 2rem;
+}
+
+.ll-card {
+  background-color: var(--ll-card-background);
+  border-radius: 2rem;
+  padding: 2rem;
+
+  flex: 0 0 auto;
+  width: 200px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.ll-card-text {
+  text-align: center;
+}
