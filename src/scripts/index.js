@@ -5,7 +5,6 @@ const { setupControls } = require("./controls/controls");
 const { updateDisplay } = require("./linked-list-display/linked-list-display");
 const {
   initializeLinkedList,
-  getLinkedListString,
 } = require("./linked-list-system/manage-linked-list");
 
 setupControls();
