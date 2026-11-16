@@ -20,6 +20,11 @@ export function getLinkedListSize() {
   return myLL.size();
 }
 
+export function listInsertAt(index, values) {
+  validateLL();
+  myLL.insertAt(index, ...values);
+}
+
 export function getLinkedListString() {
   validateLL();
   return myLL.toString();
@@ -50,6 +55,32 @@ export function popFromList() {
   return myLL.pop();
 }
 
+export function listContains(value) {
+  validateLL();
+  return myLL.contains(value);
+}
+
+export function listAt(value) {
+  validateLL();
+  return myLL.at(value);
+}
+
+export function listRemoveAt(value) {
+  validateLL();
+  return myLL.removeAt(value);
+}
+
+export function listHead() {
+  validateLL();
+  return myLL.head();
+}
+
+export function listTail() {
+  validateLL();
+  return myLL.tail();
+}
+
+// Utility - Throw error if myLL is found to be null
 function validateLL() {
   if (myLL === null) {
     throw new Error(

@@ -1,9 +1,14 @@
 #controls {
-  display: flex;
-  gap: 2rem;
-  padding: 2rem;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 500px);
+
+  height: 500px;
+
   justify-content: space-evenly;
+  overflow-y: scroll;
+
+  border-radius: 0;
+  gap: 2rem;
 }
 
 #controls > form {
@@ -11,6 +16,7 @@
   grid-template-columns: 1fr 2fr;
   gap: 1rem;
   border: 2px solid black;
+  box-shadow: 5px 5px 0 black;
 }
 
 label {
