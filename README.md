@@ -68,7 +68,7 @@ To deploy to gh-pages first, make sure to make a gh-pages branch. Then, run thes
 ```bash
 npm run build
 git checkout gh-pages && git merge main --no-edit
-git add dist -f && git commit -m "Deployment commit"
+git add dist -f && git commit --allow-empty -m "Deployment commit"
 git subtree push --prefix dist origin gh-pages
 git checkout main
 ```
